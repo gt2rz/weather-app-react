@@ -11,7 +11,7 @@ const App = () => {
   const [weather, setWeather] = useState(null)
 
   const getWeather = async (request) => {
-    await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${request.city},${request.country}&appid=${API_KEY}&units=metric`)
+    await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${request.city},${request.country}&appid=${API_KEY}&units=metric&lang=es`)
       .then(response => response.json())
       .then(data => {
         setWeather(JSON.parse(JSON.stringify(data)))
@@ -19,13 +19,17 @@ const App = () => {
   }  
 
   return (
-
     <div className="root">
-      
-      <Form API_KEY={API_KEY} fecther={getWeather} />      
-      {
-        weather === null ? <h1></h1> : <WeatherDetails data={weather} />
-      }
+      <section className="title">
+        <h1>WEATHER APP</h1>
+        <h2>loremIpsum  </h2>
+      </section>
+      <section>
+        <Form API_KEY={API_KEY} fecther={getWeather} />      
+        {
+          weather === null ? <h1></h1> : <WeatherDetails data={weather} />
+        }
+      </section>      
     </div>
   );
 }

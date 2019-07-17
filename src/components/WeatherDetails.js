@@ -1,6 +1,11 @@
 import React from 'react'
 
 const WeatherDetails = (props) => {
+    const icon = (ico) =>{
+        console.log(ico)
+        return "http://openweathermap.org/img/wn/" + ico + "@2x.png"
+    }
+
     return (
         <div className="weatherDetails">
             <section>
@@ -16,7 +21,10 @@ const WeatherDetails = (props) => {
                             <div>
                                 <label><strong>Parameters:</strong>{param.main}</label>
                                 <label><strong>Description:</strong>{param.description}</label>
-                                <label><strong>Ico:</strong>{param.icon}</label>
+                                <label>
+                                    <strong>Ico:</strong>
+                                    <img src={icon} />
+                                </label>
                             </div>                            
                         )
                     )
