@@ -23,7 +23,7 @@ const WeatherDetails = (props) => {
                                 <label><strong>Description:</strong>{param.description}</label>
                                 <label>
                                     <strong>Ico:</strong>
-                                    <img src={icon} />
+                                    <img src={icon(param.icon)} />
                                 </label>
                             </div>                            
                         )
