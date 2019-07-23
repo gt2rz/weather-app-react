@@ -20,6 +20,7 @@ const Form = (props) => {
 
     return (
         <form onSubmit={handleSubmit}>
+            <h3>SEARCH</h3>
             <label>City:</label>
             <input type="text" name="city" value={request.city} onChange={handleInputChange} />
             <label>Country:</label>

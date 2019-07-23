@@ -19,12 +19,12 @@ const App = () => {
   }  
 
   return (
-    <div className="root">
+    <div id="root">
       <section className="title">
         <h1>WEATHER APP</h1>
-        <h2>loremIpsum  </h2>
+        <h3>Check the weather in one place  </h3>
       </section>
-      <section>
+      <section className="results">
         <Form API_KEY={API_KEY} fecther={getWeather} />  
         {weather !== null ?
            weather.cod===200 ?
