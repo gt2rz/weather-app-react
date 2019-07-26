@@ -9,7 +9,7 @@ const WeatherDetails = (props) => {
     return (
         <div className="weatherDetails">
             <ul>
-                <h2>Weather</h2>
+                <h2>Today Weather</h2>
                 {
                     props.data.weather.map(
                         param => (
@@ -22,8 +22,8 @@ const WeatherDetails = (props) => {
                 <li><strong>Temperature:</strong>{props.data.main.temp} °C</li>
                 <li><strong>Atmospheric pressure:</strong>{props.data.main.pressure} hPa</li>
                 <li><strong>Humidity:</strong>{props.data.main.humidity}%</li>
-                {/* <li><strong>Minimum temperature (°C):</strong>{props.data.main.temp_min}</li>
-                <li><strong>Maximun temperature (°C):</strong>{props.data.main.temp_max}</li> */}
+                 <li className="showNotMobile"><strong>Minimum temperature (°C):</strong>{props.data.main.temp_min}</li>
+                {/* <li><strong>Maximun temperature (°C):</strong>{props.data.main.temp_max}</li> */}
                 <li><strong>Wind speed:</strong>{props.data.wind.speed} meter/sec</li>
                 {/* <li><strong>Wind direction:</strong>{props.data.wind.deg}°</li>    */}
                 {/* <li><strong>Cloudiness (%):</strong>{props.data.clouds.all}</li> */}
