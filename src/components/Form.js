@@ -20,11 +20,15 @@ const Form = (props) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <h3>SEARCH</h3>
-            <label>City:</label>
-            <input type="text" name="city" value={request.city} onChange={handleInputChange} />
-            <label>Country:</label>
-            <input type="text" name="country" value={request.country} onChange={handleInputChange} />
+            <h5>SEARCH</h5>
+            <div>
+                <label>City:</label>
+                <input type="text" name="city" value={request.city} onChange={handleInputChange} />
+            </div>
+            <div>
+                <label>Country:</label>
+                <input type="text" name="country" value={request.country} onChange={handleInputChange} />
+            </div>
             <button type="submit">Get Weather</button>
         </form>
     )

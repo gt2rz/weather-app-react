@@ -22,7 +22,7 @@ const App = () => {
     <div id="root">
       <section className="title">
         <h1>WEATHER APP</h1>
-        <h3>Check the weather in one place  </h3>
+        <h5>Check the weather in one place  </h5>
       </section>
       <section className="results">
         <Form API_KEY={API_KEY} fecther={getWeather} />  
