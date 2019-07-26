@@ -21,7 +21,7 @@ const App = () => {
   return (
     <div id="root">
       <section className="title">
-        <h1>WEATHER APP</h1>
+        <h1>WEATHER <strong>APP</strong></h1>
         <h5>Check the weather in one place  </h5>
       </section>
       <section className="results">

@@ -5,7 +5,7 @@ body{
     padding: 0;
     display: flex;
     overflow: hidden;
-    background-color: #10435a;
+    background-color: #ffffff;
 }
 
 #root {
@@ -20,12 +20,12 @@ section {
     padding: 0;
     min-width: 100vw !important;
     display: flex;
-    background-color: #073a51;
-    color:#fff;
+    background-color: #ffffff;
+    color:rgb(63, 63, 63);
 }
 
 .title{
-  background: url('/img/bg.jpg') ;
+  background: url('/img/bg_2.jpg') center;
   background-size: cover;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,15 @@ section {
 .title h1{
     font: size 2em;
     margin:0;
-    padding:0;
+    background-color: #fff;
+        padding-left: 5px;
+        color:#333;
+}
+
+.title h1 strong{
+    background-color: rgb(45, 116, 209);
+    padding:0 5px;
+    color:#fff;
 }
 
 .title h5{
@@ -49,52 +57,74 @@ form{
     display:flex;
     flex-direction: column;
     padding: 5px 10px;
-    background-color: #10435a;
+    background-color: #ffffff;
+    color:#333;
+    font-size: .8em;
 }
 
 form div{
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-form h5{ display:none;}
+form h5{ 
+    display:flex;
+    font-size:1em;
+    align-self: left;
+    color:#5b84fb;
+    margin:0;
+    margin-top: 5px;
+}
 
 form input{
     width: 80vw;
+    height: 5vh;
+    //padding:0;
     border:0;
-    border-bottom: 2px solid #4b649d;
-    background-color: #10435a;
-    color:#fff;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    color:rgb(61, 61, 61);
     margin:0vh 10vw;
     text-transform: uppercase;
     text-align: center;
 }
 
 form label{
-    margin:2vh 0;
+    padding: 0;
+    margin:2vh 0 0 0;
     font-weight: bold;
 }
 
 form button{
     height: 46px;
-    width:60vw;
-    background-color: #4b649d;
+    width:40vw;
+    background-color: #187bd8;
     color:#fff;
-    border: 2px solid #4b649d;
+    border: 2px solid #187bd8;
     cursor:pointer;
     margin: 2vh 4vw;
     align-self: center;
-    border-radius: 20px;
+    /* border-radius: 10px; */
 }
 
 .results{
     flex-direction: column;
-    color:#fff;
-    background-color: #092938
+    color:#333;
+    background-color: #fff;
+    
 }
 
 .results h2{
-    display:none;
+    display:flex;
+    align-self: left;
+    color:#5b84fb;
+    margin:0;
+}
+
+.results ul{
+    margin:5px;
+    /* border: 2px solid #000; */
+    align-content: center;
 }
 
 .results li{
@@ -112,6 +142,25 @@ form button{
 .showNotMobile{
     display:hidden;
 }
+
+.weatherDetails{
+    border-top: 1px solid rgb(231, 231, 231);
+    margin:0;
+}
+
+.weatherDetails ul{
+    padding:0;
+}
+
+.weatherDetails h2{
+    justify-content: center;
+}
+
+.weatherDetails ul li{
+justify-content: center;
+}
+
+
 
 /* @media screen and (min-width: 600px) {
     header,footer{
@@ -132,57 +181,71 @@ form button{
     }
     
     .title{
-      background: url('/img/bg_2.jpg') ;
+      background: url('/img/bg_2.jpg') right;
       background-size: cover;
         flex-direction: column;
-      color:#092938;
+      color:#fff;
       min-width: 70vw !important;
     }
     
     .title h1{
         font-size:3em;
+        color:#333;
+        background-color: #fff;
+        padding-left: 5px;
+    }
+
+    .title h1 strong{
+        background-color: rgb(45, 116, 209);
+        padding:0 5px;
+        color:#fff;
     }
     
     form{
         display:flex;
         flex-direction: column;
         padding: 20px;
-        background-color: #10435a;
+        background-color: #fff;
     }
     
     form div{
         display:flex;
         flex-direction: row;
+        margin-top: 10px;
     }
     
     form h5{ 
         display:flex;
         font-size:1.6em;
         align-self: center;
+        color:#5b84fb;
+        margin:4vh;
     }
     
     form input{
         width: 30vw;
-        height: 20px;
+        height: 30px;
         margin:0vh 1vw;
         padding: 5px;
     }
     
     form label{
-        margin-left: 10px;
+        margin: 10px;
         font-weight: bold;
     }
     
     form button{
-        margin-left: 20px;
-        width:20vw;
+        width:12vw;
         border-radius: 0px;
+        margin: 20px 0 0 10px;
     }
+
     
     .results h2{
         display:flex;
         text-transform: uppercase;
         align-self: center;
+        color:#5b84fb;
     }
     
     .results li{
@@ -197,5 +260,10 @@ form button{
 
     .showNotMobile{
         display:flex;
+    }
+
+    .weatherDetails{
+        border-top: 1px solid #ccc;
+        padding-top:5vh;
     }
 }

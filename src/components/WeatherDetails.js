@@ -22,7 +22,7 @@ const WeatherDetails = (props) => {
                 <li><strong>Temperature:</strong>{props.data.main.temp} °C</li>
                 <li><strong>Atmospheric pressure:</strong>{props.data.main.pressure} hPa</li>
                 <li><strong>Humidity:</strong>{props.data.main.humidity}%</li>
-                 <li className="showNotMobile"><strong>Minimum temperature (°C):</strong>{props.data.main.temp_min}</li>
+                 {/* <li className="showNotMobile"><strong>Minimum temperature (°C):</strong>{props.data.main.temp_min}</li> */}
                 {/* <li><strong>Maximun temperature (°C):</strong>{props.data.main.temp_max}</li> */}
                 <li><strong>Wind speed:</strong>{props.data.wind.speed} meter/sec</li>
                 {/* <li><strong>Wind direction:</strong>{props.data.wind.deg}°</li>    */}
