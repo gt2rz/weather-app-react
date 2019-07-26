@@ -153,7 +153,7 @@ form button{
 }
 
 .weatherDetails{
-    border-top: 1px solid rgb(231, 231, 231);
+    //border-top: 1px solid rgb(231, 231, 231);
     margin:0;
 }
 
@@ -176,6 +176,51 @@ form button{
     color: #fff;
     padding: 10px 30px;
     border-radius: 8px;
+}
+
+.animateHideForm{
+    animation-name: hide-animate;
+    animation-duration: 1s;
+    position:relative;
+    right:400px;
+    opacity:0;
+    z-index:0;
+    
+}
+
+@keyframes hide-animate{
+    from{
+        position:relative;
+        right: 0px;
+        opacity:1;
+    }
+    to{
+        position:relative;
+        right:200px;
+        opacity:0;
+    }
+}
+
+.animateShowDetails{
+    animation-name: showDetails-animate;
+    animation-duration: 1s;
+    position:relative;
+    top: 10px;
+        opacity:1;
+        z-index:1000;
+}
+
+@keyframes showDetails-animate{
+    from{
+        position:relative;
+        top: 1000px;
+        opacity:0;
+    }
+    to{
+        position:relative;
+        top: 10px;
+        opacity:1;
+    }
 }
 
 /* @media screen and (min-width: 600px) {
@@ -279,7 +324,7 @@ form button{
     }
 
     .weatherDetails{
-        border-top: 1px solid #ccc;
+        //border-top: 1px solid #ccc;
         padding-top:5vh;
     }
 }

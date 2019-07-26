@@ -7,7 +7,7 @@ const WeatherDetails = (props) => {
     }
 
     return (
-        <div className="weatherDetails">
+        <div className={`weatherDetails ${props.className}`}>
             <ul>
                 <h2>Today Weather</h2>
                 {

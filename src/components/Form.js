@@ -19,7 +19,7 @@ const Form = (props) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className={props.className} onSubmit={handleSubmit}>
             <h5>SEARCH WEATHER</h5>
             <div>
                 <label>City:</label>
