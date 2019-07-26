@@ -29,7 +29,13 @@ const Form = (props) => {
                 <label>Country:</label>
                 <input type="text" name="country" value={request.country} onChange={handleInputChange} />
             </div>
-            <button type="submit">Get Weather</button>
+            {
+                props.loader ?
+                    <div className="loading">
+                        <img src="img/loading.gif" alt="loading"/>
+                    </div>
+                : <button type="submit">Get Weather</button>
+            }            
         </form>
     )
 

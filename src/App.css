@@ -8,11 +8,20 @@ body{
     background-color: #ffffff;
 }
 
-#root {
+#root{
     display: flex;
     min-width: 100vw !important;
     min-height: 100vh;
     flex-direction: column;
+}
+
+.loading{
+    justify-content: center;
+}
+
+.loading img{
+    width: 200px;
+    height: 200px;    
 }
 
 section {
@@ -31,15 +40,15 @@ section {
   align-items: center;
   flex-direction: column;
   color:#fff;
-  height: 20vh !important;
+  height: 30vh !important;
 }
 
 .title h1{
-    font: size 2em;
-    margin:0;
+    font-size: 2em;
+    margin:8vh 0 0 0;
     background-color: #fff;
-        padding-left: 5px;
-        color:#333;
+    padding-left: 5px;
+    color:#333;
 }
 
 .title h1 strong{
@@ -157,10 +166,17 @@ form button{
 }
 
 .weatherDetails ul li{
-justify-content: center;
+    justify-content: center;
 }
 
-
+.error{
+    margin-top:10vh;
+    align-self: center;
+    background: #484848;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 8px;
+}
 
 /* @media screen and (min-width: 600px) {
     header,footer{
