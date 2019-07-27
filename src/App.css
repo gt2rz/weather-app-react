@@ -62,6 +62,13 @@ section {
     padding:0;
 }
 
+.title h6{
+    position: absolute;
+    color:#fff;
+    bottom: 5px;
+    left:10px;
+}
+
 form{
     display:flex;
     flex-direction: column;
@@ -88,7 +95,6 @@ form h5{
 form input{
     width: 80vw;
     height: 5vh;
-    //padding:0;
     border:0;
     border-bottom: 1px solid #ddd;
     background-color: #fff;
@@ -153,12 +159,15 @@ form button{
 }
 
 .weatherDetails{
-    //border-top: 1px solid rgb(231, 231, 231);
     margin:0;
+    display:none;
+    justify-content: center;
 }
 
 .weatherDetails ul{
     padding:0;
+    margin-bottom: 8vh;
+    justify-content: center;   
 }
 
 .weatherDetails h2{
@@ -167,59 +176,135 @@ form button{
 
 .weatherDetails ul li{
     justify-content: center;
+    font-size: .8em;
+}
+
+.weatherDetails .icon{
+    margin: 6vh 0;
+    font-size:1.1em;
+}
+.weatherIcon{
+    background-color: rgb(150, 204, 65);
+    border-radius: 60px;
+    margin-right: 10px;
+}
+
+.weatherDetails button, .errorBack{
+    background: transparent;
+    border:none;
+    color:rgb(131, 131, 131);
+    font-weight: bold;
+    width:80px;
+    align-self: center;
+    cursor:pointer;
+}
+.weatherDetails .request{
+    text-transform: uppercase;
+    color:#333;
+    font-weight: bold;
+    display: flex;
+    justify-content:center;
+    font-size: .6em;
+}
+
+.msgError{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding:0;
 }
 
 .error{
-    margin-top:10vh;
     align-self: center;
-    background: #484848;
+    background: #d41111;
     color: #fff;
     padding: 10px 30px;
     border-radius: 8px;
 }
 
+.hide{
+    display:none;
+}
+
 .animateHideForm{
     animation-name: hide-animate;
     animation-duration: 1s;
-    position:relative;
-    right:400px;
-    opacity:0;
-    z-index:0;
-    
+    animation-fill-mode: forwards;
 }
 
 @keyframes hide-animate{
     from{
-        position:relative;
-        right: 0px;
+        top: 0px;
         opacity:1;
     }
     to{
-        position:relative;
-        right:200px;
+        top:-200px;
         opacity:0;
-    }
+    } 
 }
 
 .animateShowDetails{
     animation-name: showDetails-animate;
-    animation-duration: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    display:flex;
     position:relative;
-    top: 10px;
-        opacity:1;
-        z-index:1000;
+    z-index:1000;
 }
 
 @keyframes showDetails-animate{
-    from{
-        position:relative;
+    0%{
         top: 1000px;
-        opacity:0;
+        opacity:0; 
+    }    
+    90%{
+        top: 5px;
     }
-    to{
-        position:relative;
-        top: 10px;
-        opacity:1;
+    100%{
+        display:flex;
+        flex-direction: column;
+        top: 20px;
+        opacity:1;   
+        order: -1;     
+    }
+}
+
+.animateShowForm{
+    animation-name: showForm-animate;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;  
+    position: relative;  
+    flex-direction: column;
+   
+}
+
+@keyframes showForm-animate{
+    0%{
+        opacity:0; 
+    }    
+    100%{
+        opacity:1;   
+        order: -1;     
+    }
+}
+
+.animateHideDetails{
+    animation-name: hideDetails-animate;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    display:flex;
+    flex-direction: column;
+    display:none;
+}
+
+@keyframes hideDetails-animate{
+    0%{
+        opacity:.6; 
+    }    
+    100%{
+        top:5000px;
+        opacity:0;   
+        order: 1;     
     }
 }
 
@@ -324,7 +409,6 @@ form button{
     }
 
     .weatherDetails{
-        //border-top: 1px solid #ccc;
         padding-top:5vh;
     }
 }

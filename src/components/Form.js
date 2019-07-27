@@ -11,6 +11,7 @@ const Form = (props) => {
         if(!request.city || !request.country) return
       
         props.fecther(request)
+        setRequest(initialFormState)
     }
 
     const handleInputChange = event => {
