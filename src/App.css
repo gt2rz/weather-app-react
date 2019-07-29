@@ -1,5 +1,5 @@
 html,
-body{
+body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -8,20 +8,20 @@ body{
     background-color: #ffffff;
 }
 
-#root{
+#root {
     display: flex;
     min-width: 100vw !important;
     min-height: 100vh;
     flex-direction: column;
 }
 
-.loading{
+.loading {
     justify-content: center;
 }
 
-.loading img{
+.loading img {
     width: 200px;
-    height: 200px;    
+    height: 200px;
 }
 
 section {
@@ -30,191 +30,192 @@ section {
     min-width: 100vw !important;
     display: flex;
     background-color: #ffffff;
-    color:rgb(63, 63, 63);
+    color: rgb(63, 63, 63);
 }
 
-.title{
-  background: url('/img/bg_2.jpg') center;
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color:#fff;
-  height: 30vh !important;
+.title {
+    background: url('/img/bg_2.jpg') center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    height: 30vh !important;
 }
 
-.title h1{
+.title h1 {
     font-size: 2em;
-    margin:8vh 0 0 0;
+    margin: 8vh 0 0 0;
     background-color: #fff;
     padding-left: 5px;
-    color:#333;
+    color: #333;
 }
 
-.title h1 strong{
+.title h1 strong {
     background-color: rgb(45, 116, 209);
-    padding:0 5px;
-    color:#fff;
+    padding: 0 5px;
+    color: #fff;
 }
 
-.title h5{
-    margin:0;
-    padding:0;
+.title h5 {
+    margin: 0;
+    padding: 0;
 }
 
-.title h6{
+.title h6 {
     position: absolute;
-    color:#fff;
+    color: #fff;
     bottom: 5px;
-    left:10px;
+    left: 10px;
 }
 
-form{
-    display:flex;
+form {
+    display: flex;
     flex-direction: column;
     padding: 5px 10px;
     background-color: #ffffff;
-    color:#333;
+    color: #333;
     font-size: .8em;
 }
 
-form div{
-    display:flex;
+form div {
+    display: flex;
     flex-direction: row;
 }
 
-form h5{ 
-    display:flex;
-    font-size:1em;
+form h5 {
+    display: flex;
+    font-size: 1em;
     align-self: left;
-    color:#5b84fb;
-    margin:0;
+    color: #5b84fb;
+    margin: 0;
     margin-top: 5px;
 }
 
-form input{
+form input {
     width: 80vw;
     height: 5vh;
-    border:0;
+    border: 0;
     border-bottom: 1px solid #ddd;
     background-color: #fff;
-    color:rgb(61, 61, 61);
-    margin:0vh 10vw;
+    color: rgb(61, 61, 61);
+    margin: 0vh 10vw;
     text-transform: uppercase;
     text-align: center;
 }
 
-form label{
+form label {
     padding: 0;
-    margin:2vh 0 0 0;
+    margin: 2vh 0 0 0;
     font-weight: bold;
 }
 
-form button{
+form button {
     height: 46px;
-    width:40vw;
+    width: 40vw;
     background-color: #187bd8;
-    color:#fff;
+    color: #fff;
     border: 2px solid #187bd8;
-    cursor:pointer;
+    cursor: pointer;
     margin: 2vh 4vw;
     align-self: center;
-    /* border-radius: 10px; */
 }
 
-.results{
+.results {
     flex-direction: column;
-    color:#333;
+    color: #333;
     background-color: #fff;
-    
+
 }
 
-.results h2{
-    display:flex;
+.results h2 {
+    display: flex;
     align-self: left;
-    color:#5b84fb;
-    margin:0;
+    color: #5b84fb;
+    margin: 0;
 }
 
-.results ul{
-    margin:5px;
-    /* border: 2px solid #000; */
+.results ul {
+    margin: 5px;
     align-content: center;
 }
 
-.results li{
+.results li {
     font-size: 0.8em;
     list-style: none;
-    margin-top:1vh;
+    margin-top: 1vh;
     align-items: center;
     display: flex;
 }
 
-.results li strong{
-    margin-right: 5px;    
+.results li strong {
+    margin-right: 5px;
 }
 
-.showNotMobile{
-    display:hidden;
+.showNotMobile {
+    display: hidden;
 }
 
-.weatherDetails{
-    margin:0;
-    display:none;
+.weatherDetails {
+    margin: 0;
+    display: none;
     justify-content: center;
 }
 
-.weatherDetails ul{
-    padding:0;
+.weatherDetails ul {
+    padding: 0;
     margin-bottom: 8vh;
-    justify-content: center;   
-}
-
-.weatherDetails h2{
     justify-content: center;
 }
 
-.weatherDetails ul li{
+.weatherDetails h2 {
+    justify-content: center;
+}
+
+.weatherDetails ul li {
     justify-content: center;
     font-size: .8em;
 }
 
-.weatherDetails .icon{
+.weatherDetails .icon {
     margin: 6vh 0;
-    font-size:1.1em;
+    font-size: 1.1em;
 }
-.weatherIcon{
+
+.weatherIcon {
     background-color: rgb(150, 204, 65);
     border-radius: 60px;
     margin-right: 10px;
 }
 
-.weatherDetails button, .errorBack{
+.weatherDetails button,
+.errorBack {
     background: transparent;
-    border:none;
-    color:rgb(131, 131, 131);
+    border: none;
+    color: rgb(131, 131, 131);
     font-weight: bold;
-    width:80px;
+    width: 80px;
     align-self: center;
-    cursor:pointer;
+    cursor: pointer;
 }
-.weatherDetails .request{
+
+.weatherDetails .request {
     text-transform: uppercase;
-    color:#333;
+    color: #333;
     font-weight: bold;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     font-size: .6em;
 }
 
-.msgError{
+.msgError {
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding:0;
+    padding: 0;
 }
 
-.error{
+.error {
     align-self: center;
     background: #d41111;
     color: #fff;
@@ -222,89 +223,94 @@ form button{
     border-radius: 8px;
 }
 
-.hide{
-    display:none;
+.hide {
+    display: none;
 }
 
-.animateHideForm{
+.animateHideForm {
     animation-name: hide-animate;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
-@keyframes hide-animate{
-    from{
+@keyframes hide-animate {
+    from {
         top: 0px;
-        opacity:1;
+        opacity: 1;
     }
-    to{
-        top:-200px;
-        opacity:0;
-    } 
+
+    to {
+        top: -200px;
+        opacity: 0;
+    }
 }
 
-.animateShowDetails{
+.animateShowDetails {
     animation-name: showDetails-animate;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    display:flex;
-    position:relative;
-    z-index:1000;
+    display: flex;
+    position: relative;
+    z-index: 1000;
 }
 
-@keyframes showDetails-animate{
-    0%{
+@keyframes showDetails-animate {
+    0% {
         top: 1000px;
-        opacity:0; 
-    }    
-    90%{
+        opacity: 0;
+    }
+
+    90% {
         top: 5px;
     }
-    100%{
-        display:flex;
+
+    100% {
+        display: flex;
         flex-direction: column;
         top: 20px;
-        opacity:1;   
-        order: -1;     
+        opacity: 1;
+        order: -1;
     }
 }
 
-.animateShowForm{
+.animateShowForm {
     animation-name: showForm-animate;
     animation-duration: 3s;
-    animation-fill-mode: forwards;  
-    position: relative;  
+    animation-fill-mode: forwards;
+    position: relative;
     flex-direction: column;
-   
+
 }
 
-@keyframes showForm-animate{
-    0%{
-        opacity:0; 
-    }    
-    100%{
-        opacity:1;   
-        order: -1;     
+@keyframes showForm-animate {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        order: -1;
     }
 }
 
-.animateHideDetails{
+.animateHideDetails {
     animation-name: hideDetails-animate;
     animation-duration: .5s;
     animation-fill-mode: forwards;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    display:none;
+    display: none;
 }
 
-@keyframes hideDetails-animate{
-    0%{
-        opacity:.6; 
-    }    
-    100%{
-        top:5000px;
-        opacity:0;   
-        order: 1;     
+@keyframes hideDetails-animate {
+    0% {
+        opacity: .6;
+    }
+
+    100% {
+        top: 5000px;
+        opacity: 0;
+        order: 1;
     }
 }
 
@@ -323,92 +329,69 @@ form button{
 
     section {
         min-width: 30vw !important;
-        min-height: 100vh!important;
-    }
-    
-    .title{
-      background: url('/img/bg_2.jpg') right;
-      background-size: cover;
-        flex-direction: column;
-      color:#fff;
-      min-width: 70vw !important;
-    }
-    
-    .title h1{
-        font-size:3em;
-        color:#333;
-        background-color: #fff;
-        padding-left: 5px;
+        min-height: 100vh !important;
     }
 
-    .title h1 strong{
-        background-color: rgb(45, 116, 209);
-        padding:0 5px;
-        color:#fff;
+    .title {
+        background: url('/img/bg_2.jpg') right;
+        min-width: 70vw !important;
     }
-    
-    form{
-        display:flex;
-        flex-direction: column;
+
+    .title h1 {
+        font-size: 3em;
+    }
+
+    form {
         padding: 20px;
-        background-color: #fff;
     }
-    
-    form div{
-        display:flex;
-        flex-direction: row;
+
+    form div {
         margin-top: 10px;
     }
-    
-    form h5{ 
-        display:flex;
-        font-size:1.6em;
+
+    form h5 {
+        font-size: 1.6em;
         align-self: center;
-        color:#5b84fb;
-        margin:4vh;
+        margin: 4vh;
     }
-    
-    form input{
+
+    form input {
         width: 30vw;
         height: 30px;
-        margin:0vh 1vw;
+        margin: 0vh 1vw;
         padding: 5px;
     }
-    
-    form label{
+
+    form label {
         margin: 10px;
-        font-weight: bold;
     }
-    
-    form button{
-        width:12vw;
-        border-radius: 0px;
+
+    form button {
+        width: 12vw;
         margin: 20px 0 0 10px;
     }
 
-    
-    .results h2{
-        display:flex;
+
+    .results h2 {
         text-transform: uppercase;
         align-self: center;
-        color:#5b84fb;
     }
-    
-    .results li{
+
+    .results li {
         font-size: 1em;
-        margin-left:20px;
-        margin-top:15px;
+        margin-left: 20px;
+        margin-top: 15px;
     }
-    
-    .results li strong{
+
+    .results li strong {
         margin-right: 15px;
-    } 
-
-    .showNotMobile{
-        display:flex;
     }
 
-    .weatherDetails{
-        padding-top:5vh;
+    .showNotMobile {
+        display: flex;
+    }
+
+    .weatherDetails {
+        padding-top: 5vh;
     }
 }

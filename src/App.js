@@ -3,6 +3,8 @@ import './App.css';
 
 import Form from './components/Form'
 import WeatherDetails from './components/WeatherDetails'
+import Copyright from './components/Copyright'
+import Error from './components/Error'
 
 const API_KEY = "cc86a25e82d8001abee3b2476144e005"
 
@@ -39,7 +41,7 @@ const App = () => {
       <section className="title">
         <h1>WEATHER <strong>APP</strong></h1>
         <h5>Check the weather in one place  </h5>
-        <h6>@gt2rz | Powered by <strong>ReactJS | 2019</strong></h6>
+        <Copyright />
       </section>
       <section className="results">
         <Form className={animateForm} API_KEY={API_KEY} fecther={getWeather} loader={loading} />
@@ -48,10 +50,7 @@ const App = () => {
             : weather !== null ?
               weather.cod === 200 ?
                 <WeatherDetails className={animateWeatherDetails} data={weather} onBack={onBack} request={request}/>
-                : <div className={`msgError ${error}`}>
-                    <h1 className="error">City Not Found</h1>
-                    <button className="errorBack"onClick={onBack}> BACK </button>
-                  </div>
+                : <Error className={`msgError ${error}`} message={"City Not Found"} onBack={onBack} />
               : null
         }
       </section>
