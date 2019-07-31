@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './App.css';
 
-import Title from './components/Title'
-import Results from './components/Results'
+import Loading from './components/Loading'
+import ErrorBoundary from './components/ErrorBoundary'
+
+const Title = React.lazy(()=>import('./components/Title'))
+const Results = React.lazy(()=>import('./components/Results'))
 
 const API_KEY = "cc86a25e82d8001abee3b2476144e005"
 
-const App = () => {
+const App = () => {  
   return (
-    <div id="root">
-      <Title />
-      <Results API_KEY={API_KEY} />
-    </div>
+    <ErrorBoundary>
+      <Suspense fallback={<Loading message="LOADING...!!!"/>}>
+        <div id="root">
+        <Title />
+          <Results API_KEY={API_KEY} />
+        </div>
+      </Suspense>
+    </ErrorBoundary>
   );
 }
 
